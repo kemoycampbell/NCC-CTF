@@ -1,0 +1,17 @@
+name: "The Bird"
+author: "d3c0d3r - Kemoy"
+category: OSINT
+
+description: Duggy Legend is up to no good. Track down his social media accounts.
+
+value: 100
+type: standard
+
+flags:
+  - NCC{It_is_$3@rchAble}
+
+tags:
+  - osint
+
+state: hidden
+version: "0.1"
