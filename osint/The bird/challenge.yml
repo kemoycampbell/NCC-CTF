@@ -13,5 +13,5 @@ flags:
 tags:
   - osint
 
-state: hidden
+state: visible
 version: "0.1"

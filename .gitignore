@@ -1,3 +1,7 @@
+#ctf and sensitive stuff
+.env
+.ctf
+
 #VSC
 .vscode/*
 !.vscode/settings.json
