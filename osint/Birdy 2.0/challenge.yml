@@ -1,0 +1,19 @@
+name: "Birdy 2.0"
+author: "d3c0d3r - Kemoy"
+category: OSINT
+
+description: Folks, your job is simple. Login Duggy's birdy account, embarrass him to his followers and find the flag!
+  
+  ***Please do not attempt to reset or change the password if you gain access to the email account***
+
+value: 150
+type: standard
+
+flags:
+  - NCC{Never_U$3_Th3_$@me_password_on_all_Platf0rm!!!}
+
+tags:
+  - osint
+
+state: visible
+version: "0.1"

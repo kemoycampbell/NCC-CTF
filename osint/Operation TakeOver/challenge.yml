@@ -1,0 +1,18 @@
+name: "Operation TakeOver"
+author: "d3c0d3r - Kemoy"
+category: OSINT
+
+description: Duggy sent an email encrypted with AES encryption message to his fellow dogs. Something serious is about to go down tonight!
+             Decrypt the message and send warning to the targets!!!
+
+value: 350
+type: standard
+
+flags:
+  - NCC{N3v3r_U$3_WEAK_P@$$w0rd_1n_AES}
+
+tags:
+  - osint
+
+state: visible
+version: "0.1"
