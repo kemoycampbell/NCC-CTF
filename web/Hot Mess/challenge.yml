@@ -1,0 +1,24 @@
+name: Hot Mess
+author: d3c0d3r - Kemoy
+category: WEB
+description: 'I think I learned my lesson... Aint no way you gonna pass this one!!!
+
+
+
+
+
+
+
+  http://localhost:9092'
+value: 300
+type: standard
+flags:
+- NCC{JS_0bfu$cator_Ar3_A_W@ck!!!}
+tags:
+- web
+state: visible
+version: '0.1'
+exposeService:
+  protocol: http://
+  internalPort: 80
+  publicPort: 9092

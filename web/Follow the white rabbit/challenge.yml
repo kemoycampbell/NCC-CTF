@@ -1,0 +1,25 @@
+name: Follow the white rabbit
+author: d3c0d3r - Kemoy
+category: WEB
+description: 'Hello Alice, Follow the white rabbit...Wait, I mean, follow the robot...
+  Beedo boop bop beeda
+
+
+
+
+
+
+
+  http://localhost:9093'
+value: 500
+type: standard
+flags:
+- NCC{R0b0ts_@r3_n0t_A1way_h0n0r3d}
+tags:
+- web
+state: visible
+version: '0.1'
+exposeService:
+  protocol: http://
+  internalPort: 80
+  publicPort: 9093

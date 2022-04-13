@@ -1,7 +1,7 @@
-name: Source of the truth
+name: Source of the truth 2.0
 author: d3c0d3r - Kemoy
 category: WEB
-description: 'Thou shall not pass!!!
+description: 'You have no power here!
 
 
 
@@ -9,11 +9,11 @@ description: 'Thou shall not pass!!!
 
 
 
-  http://localhost:9090'
-value: 100
+  http://localhost:9091'
+value: 150
 type: standard
 flags:
-- NCC{HTML_S0urC3_C0d3_are_V1sible!}
+- NCC{Y0u_ar3_R0cking_dis!!!}
 tags:
 - web
 state: visible
@@ -21,4 +21,4 @@ version: '0.1'
 exposeService:
   protocol: http://
   internalPort: 80
-  publicPort: 9090
+  publicPort: 9091

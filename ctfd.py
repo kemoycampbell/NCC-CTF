@@ -59,17 +59,23 @@ def docker_container(directory):
         internal_port = challenge_yml['exposeService']['internalPort']
         
         #stop the previous image
-        os.system(f"docker stop $(docker ps -q --filter ancestor={tag} )")
-        os.system(f"docker run -d -p {public_port}:{internal_port} {tag}:latest")
+        os.system(f"docker stop {tag}")
+        os.system(f"docker rm {tag}")
+        os.system(f"docker run -d --name {tag} -p {public_port}:{internal_port} {tag}:latest")
         
         #we want to update the challenge.yml with the port info
-        scheme = challenge_yml['exposeService']['scheme']
+        protocol = challenge_yml['exposeService']['protocol']
         DOMAIN = config("CTFD_DOMAIN", default=None)
         description = challenge_yml['description']
-        if 'http' in scheme or 'https' in scheme:
-            challenge_yml['description']= description +'\n' + f"{scheme}{DOMAIN}:{public_port}"
-        elif scheme == 'ssh':
-            challenge_yml['description']=description + '\n' + f"{scheme} {DOMAIN} -p {public_port}"
+      
+        #create the host based on the protocol
+        if 'http' in protocol or 'https' in protocol:
+            host = f"{protocol}{DOMAIN}:{public_port}"
+        elif protocol == 'ssh':
+            host = f"{protocol} {DOMAIN} -p {public_port}"
+        
+        #removing the old host before appending the new host
+        challenge_yml['description'] = description.replace(host, '') + '\n' + host
         
         
         #write the new challenge.yml
