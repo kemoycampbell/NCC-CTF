@@ -1,0 +1,12 @@
+name: Brew
+author: d3c0d3r - Kemoy
+category: Reverse
+
+description: 'You just have to un-brew me'
+
+value: 100
+type: standard
+flag: NCC{N0t_$0_S3creT_H3h}
+
+files:
+  - dist/Brew.class

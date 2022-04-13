@@ -1,0 +1,20 @@
+name: Oh Plz
+author: "d3c0d3r - Kemoy"
+category: Binary
+
+description: "Can you force your way in?"
+value: 250
+type: standard
+
+flags:
+  - NCC{C_Vu1nerable_Much?_Know_The_m3thod_Limitation!}
+
+tags:
+  - binary
+
+files: 
+  - dist/guess
+
+state: visible
+version: "0.1"
+
