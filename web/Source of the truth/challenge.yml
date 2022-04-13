@@ -1,27 +1,18 @@
-name: "Source of the truth"
-author: "d3c0d3r - Kemoy"
+name: Source of the truth
+author: d3c0d3r - Kemoy
 category: WEB
+description: 'Thou shall not pass!!!
 
-description: Thou shall not pass!!!
-
+  http://localhost:9090'
 value: 100
 type: standard
-
 flags:
-  - NCC{HTML_S0urC3_C0d3_are_V1sible!}
-
+- NCC{HTML_S0urC3_C0d3_are_V1sible!}
 tags:
-  - web
-
+- web
 state: visible
-version: "0.1"
-
-containers:
-  server:
-    build: .
-    ports:
-      - containerPort: 80
-
-expose:
-  - containerPort: 80
-    nodePort: 30272
+version: '0.1'
+exposeService:
+  scheme: http://
+  internalPort: 80
+  publicPort: 9090

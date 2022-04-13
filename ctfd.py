@@ -6,6 +6,7 @@ import json
 from decouple import config
 import subprocess
 
+
 # Initialize ctfcli with the CTFD_TOKEN and CTFD_URL.
 def init():
 
@@ -35,8 +36,45 @@ def sync(category):
 
     for challenge in challenges:
         if os.path.exists(f"{challenge}/challenge.yml"):
+            docker_container(challenge)
             print(f"Syncing challenge: {challenge}")
             os.system(f"ctf challenge sync '{challenge}'; ctf challenge install '{challenge}'")
+
+
+def strip_special_characters(name):
+    return (''.join(e for e in name if e.isalnum())).lower()
+def docker_container(directory):
+    challenge = f"{directory}/challenge.yml"
+    if 'challenge.yml' not in challenge:
+        return
+    chall = open(challenge, 'r')
+    challenge_yml = yaml.load(chall, Loader=yaml.FullLoader)
+    if 'exposeService' in challenge_yml:
+        #building the image based on the docker file
+        tag = strip_special_characters(challenge_yml['name'])
+        dir = directory.replace(' ', '\\ ') #we need the full path to the dockerfile and need to take care of spacing as well
+        os.system(f"docker build -t {tag} {dir}") #build the image tag
+        #run the image and start it using the latest build , desired port in deatach mode
+        public_port = challenge_yml['exposeService']['publicPort']
+        internal_port = challenge_yml['exposeService']['internalPort']
+        
+        #stop the previous image
+        os.system(f"docker stop $(docker ps -q --filter ancestor={tag} )")
+        os.system(f"docker run -d -p {public_port}:{internal_port} {tag}:latest")
+        
+        #we want to update the challenge.yml with the port info
+        scheme = challenge_yml['exposeService']['scheme']
+        DOMAIN = config("CTFD_DOMAIN", default=None)
+        description = challenge_yml['description']
+        if 'http' in scheme or 'https' in scheme:
+            challenge_yml['description']= description +'\n' + f"{scheme}{DOMAIN}:{public_port}"
+        elif scheme == 'ssh':
+            challenge_yml['description']=description + '\n' + f"{scheme} {DOMAIN} -p {public_port}"
+        
+        
+        #write the new challenge.yml
+        chall = open(challenge, 'w')
+        yaml.dump(challenge_yml, chall, sort_keys=False)
 
 
 #dont neeed this yet, might need it once 

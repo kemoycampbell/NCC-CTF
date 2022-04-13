@@ -1,5 +1,5 @@
 #! /bin/bash
-git clone https://github.com/csivitu/ctfcli /tmp/ctfcli
+git clone https://github.com/CTFd/ctfcli /tmp/ctfcli
 
 cd /tmp/ctfcli
 python3 setup.py install
