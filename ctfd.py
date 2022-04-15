@@ -73,6 +73,8 @@ def docker_container(directory):
             host = f"{protocol}{DOMAIN}:{public_port}"
         elif protocol == 'ssh':
             host = f"{protocol} {DOMAIN} -p {public_port}"
+        elif protocol=='nc':
+            host = f"{protocol} {DOMAIN} {public_port}"
         
         #removing the old host before appending the new host
         challenge_yml['description'] = description.replace(host, '') + '\n' + host

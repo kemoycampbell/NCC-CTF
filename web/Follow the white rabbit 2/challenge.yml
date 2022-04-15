@@ -6,6 +6,9 @@ description: 'This is our mini cloud server that allows us to upload images. Dow
 
 
 
+
+
+
   http://localhost:9096'
 value: 1000
 tag: web
