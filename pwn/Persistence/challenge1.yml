@@ -2,32 +2,6 @@ name: Persistence
 author: j0zsa - AJ
 category: pwn
 description: 'Try, and if you do not succeed, try again.
-
-
-
-  nc localhost 9104
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   http://localhost:9104'
 value: 100
 type: standard
@@ -36,3 +10,7 @@ flags:
 tags:
 - pwn
 state: hidden
+exposeService:
+  protocol: http://
+  internalPort: 80
+  publicPort: 9104
