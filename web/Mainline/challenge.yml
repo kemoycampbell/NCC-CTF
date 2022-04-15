@@ -1,0 +1,17 @@
+name: Mainline
+author: j0zsa - AJ
+category: Web
+description: "There is no escape from life.
+ http://localhost:9042"
+value: 100
+type: standard
+flags:
+- NCC{o0ps_f0rg0t_2_esc4p3}
+tags:
+- web
+- sql
+state: visible
+exposeService:
+  protocol: http://
+  internalPort: 80
+  publicPort: 9042
