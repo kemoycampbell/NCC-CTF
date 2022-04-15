@@ -1,9 +1,11 @@
-FROM python:3
+FROM python:3-slim
 
-RUN apt-get update && apt-get install -y netcat
+RUN apt-get update && apt-get install -y \
+    xinetd
 
-COPY persistence.py persistence.py
-COPY wordlist.txt wordlist.txt
+COPY ctf.xinetd /etc/xinetd.d/ctf
+COPY ./src /ctf/
 
-CMD ["/bin/bash", "-c", "nc -lkp 9999 --sh-exec python3 ./persistence.py"]
+CMD ["./start.sh"]
+
 EXPOSE 9999
