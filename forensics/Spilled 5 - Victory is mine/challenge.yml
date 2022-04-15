@@ -4,7 +4,7 @@ author: d3c0d3r - Kemoy
 category: Forensics
 tag: forensics
 
-The flag must be in the format NCC{CVE-XXXX-XXXX}"
+The flag must be in the format NCC{CVE-XXXX-XXXX}
 value: 400
 type: standard
 flags:

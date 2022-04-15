@@ -4,7 +4,7 @@ author: d3c0d3r - Kemoy
 category: Forensics
 tag: forensics
 
-The flag must be in the format NCC{x.x.x}"
+The flag must be in the format NCC{x.x.x}
 value: 150
 type: standard
 flags:
