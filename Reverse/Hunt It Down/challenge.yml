@@ -1,0 +1,14 @@
+name: Hunt It Down
+author: j0zsa - AJ
+category: Reversing
+description: It will be okay if I just make it really hard to find, right?
+value: 300
+type: standard
+flags:
+- NCC{push_n0_s3cr3ts}
+tags:
+- reversing
+
+files:
+  - "hunt.pyc"
+state: visible
