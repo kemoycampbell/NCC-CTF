@@ -1,5 +1,8 @@
 name: "Spilled 5 - Victory is mine"
 description: "The system is vulnerable! Looking through the services information was really helpful. I love you curl!!!"
+author: d3c0d3r - Kemoy
+category: Forensics
+tag: forensics
 
 The flag must be in the format NCC{CVE-XXXX-XXXX}"
 value: 400
