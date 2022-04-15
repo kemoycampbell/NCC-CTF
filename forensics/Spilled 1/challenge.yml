@@ -1,0 +1,17 @@
+name: "Spilled 1"
+description: "A zealot hacker was able to collect semi-sensitive information about our server due to a security misconfiguration by a former intern. 
+
+What was the hacker looking at?
+
+The flag must be in the format NCC{file}"
+author: d3c0d3r - Kemoy
+category: Forensics
+tag: forensics
+
+value: 100
+type: standard
+flags:
+  - NCC{phpinfo.php}
+
+files:
+  - spilled.pcapng

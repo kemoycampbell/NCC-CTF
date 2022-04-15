@@ -1,0 +1,15 @@
+name: "Spilled 2"
+description: "The hacker was disappointed to find out that the server is not vulnerable to CVE-2021-21708
+
+The flag must be in the format NCC{programmingLanguagex.x.x}"
+author: d3c0d3r - Kemoy
+category: Forensics
+tag: forensics
+
+value: 150
+type: standard
+flags:
+  - NCC{7.4.28}
+
+files:
+  - spilled.pcapng

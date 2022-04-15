@@ -1,23 +1,7 @@
 name: Source of the truth 2.0
 author: d3c0d3r - Kemoy
 category: WEB
-description: 'You have no power here!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  http://localhost:9091'
+description: 'You have no power here!'
 value: 150
 type: standard
 flags:

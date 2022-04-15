@@ -1,0 +1,15 @@
+name: Follow the white rabbit 2
+category: WEB
+author: d3c0d3r - Kemoy
+description: 'This is our mini cloud server that allows us to upload images. Down
+  the rabbit hole we go!!!'
+value: 1000
+tag: web
+flags:
+- NCC{Way_D0wn_da_Rabbit_H0l3_ls-l_FTW}
+state: visible
+version: '0.1'
+exposeService:
+  protocol: http://
+  internalPort: 80
+  publicPort: 9096

@@ -1,23 +1,7 @@
 name: Hot Mess
 author: d3c0d3r - Kemoy
 category: WEB
-description: 'I think I learned my lesson... Aint no way you gonna pass this one!!!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  http://localhost:9092'
+description: 'I think I learned my lesson... Aint no way you gonna pass this one!!!'
 value: 300
 type: standard
 flags:
