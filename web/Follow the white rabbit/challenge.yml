@@ -2,14 +2,7 @@ name: Follow the white rabbit
 author: d3c0d3r - Kemoy
 category: WEB
 description: 'Hello Alice, Follow the white rabbit...Wait, I mean, follow the robot...
-  Beedo boop bop beeda
-
-
-
-
-
-
-  http://localhost:9093'
+  Beedo boop bop beeda'
 value: 500
 type: standard
 flags:

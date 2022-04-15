@@ -2,14 +2,7 @@ name: Follow the white rabbit 2
 category: WEB
 author: d3c0d3r - Kemoy
 description: 'This is our mini cloud server that allows us to upload images. Down
-  the rabbit hole we go!!!
-
-
-
-
-
-
-  http://localhost:9096'
+  the rabbit hole we go!!!'
 value: 1000
 tag: web
 flags:
