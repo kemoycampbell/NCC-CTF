@@ -1,0 +1,11 @@
+name: "Spilled 5 - Victory is mine"
+description: "The system is vulnerable! Looking through the services information was really helpful. I love you curl!!!"
+
+The flag must be in the format NCC{CVE-XXXX-XXXX}"
+value: 150
+type: standard
+flags:
+  - NCC{CVE-2017-7468}
+    
+files:
+  - spilled.pcapng

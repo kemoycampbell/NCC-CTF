@@ -1,0 +1,11 @@
+name: "Spilled 2"
+description: "Based on the file, what are the name of the UNIX Build and Modularization authors?"
+
+The flag must be in the format NCC{author1, author2,author3,...}"
+value: 150
+type: standard
+flags:
+  - NCC{Stig Bakken, Sascha Schumann, Jani Taskinen, Peter Kokot}
+
+files:
+  - spilled.pcapng
