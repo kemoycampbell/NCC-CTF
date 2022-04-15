@@ -1,10 +1,10 @@
 name: "Spilled 4"
-description: "The system use a specific version of curl, what is it?"
+description: "The system use a specific version of curl, what is it? 
+
+The flag must be in the format NCC{x.x.x}"
 author: d3c0d3r - Kemoy
 category: Forensics
 tag: forensics
-
-The flag must be in the format NCC{x.x.x}
 value: 150
 type: standard
 flags:
